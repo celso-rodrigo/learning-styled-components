@@ -11,7 +11,6 @@ function TextColor() {
       <ColoredTitle $color={text.toLowerCase()}>{text}</ColoredTitle>
 
       <Input
-        type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Pick a color"

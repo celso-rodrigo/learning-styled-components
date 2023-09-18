@@ -2,8 +2,22 @@ import { Title } from './Styles/TittleStyles'
 import { Button, RedButton } from './Styles/ButtonStyles'
 import { ButtonsContainer, Container } from './Styles/ContainerStyles'
 import TextColor from './Components/TextColor'
+import { styled } from 'styled-components'
+import Loading from './Components/Loading'
 
 function App() {
+  // Defining components outside render
+  const StyledComponentOutsideRender = styled.p`
+    font-size: 1rem;
+    text-align: center;
+    color: #0A195B;
+    font-family: 'Ubuntu', sans-serif;
+  `;
+
+  function styledText(text) {
+    return <StyledComponentOutsideRender>{text}</StyledComponentOutsideRender>
+  }
+
   return (
     <Container>
       <Title>
@@ -27,6 +41,10 @@ function App() {
       </ButtonsContainer>
 
       <TextColor />
+
+      {styledText("Sample Text")}
+
+      <Loading />
     </Container>
   )
 }
