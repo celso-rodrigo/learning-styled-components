@@ -1,10 +1,19 @@
-import './App.css'
+import { Title } from './Styles/TittleStyles'
+import { Button } from './Styles/ButtonStyles'
+import { ButtonsContainer, Container } from './Styles/ContainerStyles'
 
 function App() {
   return (
-    <>
-      <h1>APP</h1>
-    </>
+    <Container>
+      <Title>
+          Hello, world!
+      </Title>
+
+      <ButtonsContainer>
+        <Button>Default</Button>
+        <Button $primary>Fill</Button>
+      </ButtonsContainer>
+    </Container>
   )
 }
 
