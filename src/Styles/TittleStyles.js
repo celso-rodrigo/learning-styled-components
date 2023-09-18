@@ -6,3 +6,7 @@ export const Title = styled.h1`
   color: #0A195B;
   font-family: 'Ubuntu', sans-serif;
 `;
+
+export const ColoredTitle = styled(Title)`
+  color: ${props => props.$color ? props.$color : "#0A195B"};
+`;

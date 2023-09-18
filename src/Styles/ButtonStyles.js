@@ -12,8 +12,16 @@ export const Button = styled.button`
   border-radius: 3px;
   transition: 0.25s;
   min-width: 80px;
+  text-decoration: none;
 
+  // Pseudo-class
   &:hover {
     scale: 1.1;
   }
+`;
+
+// Extending Styles
+export const RedButton = styled(Button)`
+  color: red;
+  border-color: red;
 `;
