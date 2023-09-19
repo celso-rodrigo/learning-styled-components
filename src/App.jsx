@@ -2,7 +2,7 @@ import { Title } from './Styles/TittleStyles'
 import { Button, RedButton } from './Styles/ButtonStyles'
 import { ButtonsContainer, Container } from './Styles/ContainerStyles'
 import TextColor from './Components/TextColor'
-import { styled } from 'styled-components'
+import { ThemeProvider, styled } from 'styled-components'
 import Loading from './Components/Loading'
 
 function App() {
@@ -16,6 +16,10 @@ function App() {
 
   function styledText(text) {
     return <StyledComponentOutsideRender>{text}</StyledComponentOutsideRender>
+  }
+
+  function setTheme(theme) {
+    return {main: theme}
   }
 
   return (
@@ -45,6 +49,15 @@ function App() {
       {styledText("Sample Text")}
 
       <Loading />
+
+      {/* Theme provider */}
+      <ThemeProvider theme={{ main: 'orange'}}>
+        <Title>Theamed Title</Title>
+      </ThemeProvider>
+
+      <ThemeProvider theme={setTheme("green")}>
+        <Title>Theamed Title</Title>
+      </ThemeProvider>
     </Container>
   )
 }
